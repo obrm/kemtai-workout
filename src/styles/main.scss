@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+@import 'config';
+@import 'buttons';
+
+// general styles
+@font-face {
+  font-family: 'GilroyLight';
+  src: local('GilroyLight'),
+    url(../fonts/Gilroy/Gilroy-Light.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'GilroyRegular';
+  src: local('GilroyRegular'),
+    url(../fonts/Gilroy/Gilroy-Regular.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'GilroyMedium';
+  src: local('GilroyMedium'),
+    url(../fonts/Gilroy/Gilroy-Medium.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'GilroyBold';
+  src: local('GilroyBold'),
+    url(../fonts/Gilroy/Gilroy-Bold.ttf) format('truetype');
+  font-weight: bold;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'GilroyBold', sans-serif;
+  background: $dark-color;
+  color: #fff;
+  text-align: center;
+}
+
+header {
+  text-align: center;
+}
+
+.logo {
+  margin-top: 0.8rem;
+  width: 5.8rem;
+}
+
+h2 {
+  font-weight: 800;
+}
+
+.container {
+  margin: 1.2rem auto 0;
+  max-width: 375px;
+  text-align: center;
+}
+
+.cards-container {
+  margin-top: 2rem;
+}
+
+.card {
+  width: 90%;
+  position: relative;
+  border-radius: 10px;
+  margin: auto;
+  margin-bottom: 1rem;
+
+  h1 {
+    position: absolute;
+    top: 2.8rem;
+    left: 1rem;
+    font-size: 2.4rem;
+  }
+
+  &-badge {
+    width: 3.5rem;
+    font-family: 'GilroyLight', sans-serif;
+    font-size: 12px;
+    height: 1.4rem;
+    position: absolute;
+    top: 13px;
+    left: 11px;
+    background: $black-color;
+    border-radius: 15px;
+    padding: 4px;
+  }
+}
+
+footer {
+  p {
+    font-family: 'GilroyBold', sans-serif;
+    font-size: 10px;
+    text-transform: capitalize;
+  }
+
+  .footer-line {
+    border-top: 1px dotted #fff;
+    width: 6rem;
+    margin: 5px auto 0;
+  }
+}
