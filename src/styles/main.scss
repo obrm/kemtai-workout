@@ -93,6 +93,27 @@ h2 {
   }
 }
 
+.active {
+  width: 21.63rem;
+  height: 12.25rem;
+  border-radius: 10px;
+  border: 0.4px solid transparent;
+  background: linear-gradient(to left, $light-yellow-color, $light-green-color);
+}
+
+.not-active {
+  position: absolute;
+  width: 21.45rem;
+  height: 12.1rem;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+  border-radius: 10px;
+}
+
 footer {
   height: 45px;
 
