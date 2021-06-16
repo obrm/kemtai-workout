@@ -129,3 +129,13 @@ footer {
     margin: 5px auto 0;
   }
 }
+
+.loader {
+  height: 70vh;
+
+  &-img {
+    width: 125px;
+    margin: 150px auto 0;
+    display: block;
+  }
+}
