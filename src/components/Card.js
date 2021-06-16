@@ -3,7 +3,7 @@ import React from 'react'
 const Card = ({ id, title, image, duration, isActive, onClickHandler }) => {
   return (
     <div
-      className={`card ${isActive === null ? null : isActive && 'active'}`}
+      className={`card ${isActive === null ? '' : isActive ? 'active' : ''}`}
       onClick={() => onClickHandler(id)}
     >
       <img src={image} alt={title} className='card-img' loading='lazy' />
