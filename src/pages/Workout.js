@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import { useHistory } from 'react-router-dom'
 
 import Loader from '../layouts/Loader'
 import PieTimer from '../components/PieTimer'
@@ -10,6 +11,8 @@ const Workout = () => {
   const [loading, setLoading] = useState(true)
   const [timer, setTimer] = useState(false)
 
+  const history = useHistory()
+
   useEffect(() => {
     startVideo()
     setTimeout(() => {
@@ -17,8 +20,11 @@ const Workout = () => {
     }, 1000)
     setTimeout(() => {
       stopVideo()
-    }, 60000)
-  }, [])
+    }, 67000)
+    setTimeout(() => {
+      history.push('/')
+    }, 68000)
+  }, [history])
 
   useEffect(() => {
     setTimeout(() => {
