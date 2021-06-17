@@ -1,33 +1,38 @@
 import React, { useState, useEffect } from 'react'
 
+import Loader from '../layouts/Loader'
+
 const Workout = () => {
-  const [playing, setPlaying] = useState(false)
+  // eslint-disable-next-line
+  const [playing, setPlaying] = useState(true)
   const [counter, setCounter] = useState('')
+  const [loading, setLoading] = useState(true)
 
   useEffect(() => {
     startVideo()
     setTimeout(() => {
+      setLoading(false)
+    }, 1000)
+    setTimeout(() => {
       stopVideo()
-    }, 30000)
+    }, 60000)
   }, [])
 
   useEffect(() => {
-    if (playing) {
+    setTimeout(() => {
       setTimeout(() => {
-        setTimeout(() => {
-          setCounter(1)
-        }, 1000)
+        setCounter(1)
+      }, 1000)
 
-        setTimeout(() => {
-          setCounter(2)
-        }, 2000)
+      setTimeout(() => {
+        setCounter(2)
+      }, 2000)
 
-        setTimeout(() => {
-          setCounter('GO')
-        }, 3000)
-      }, 500)
-    }
-  }, [playing])
+      setTimeout(() => {
+        setCounter('GO')
+      }, 3000)
+    }, 500)
+  }, [])
 
   const startVideo = () => {
     setPlaying(true)
@@ -53,9 +58,10 @@ const Workout = () => {
 
   return (
     <div className='workout'>
+      {loading && <Loader />}
       <div className='workout-container'>
         <video muted autoPlay className='workout-videoFeed'></video>
-        {counter !== 'GO' && <div className='workout-overlay'>{counter}</div>}
+        {counter !== 'GO' && <div className='workout-counter'>{counter}</div>}
         {counter === 'GO' && <div className='workout-go'>{counter}</div>}
       </div>
     </div>
