@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from 'react'
 
 import Loader from '../layouts/Loader'
+import PieTimer from '../components/PieTimer'
 
 const Workout = () => {
   // eslint-disable-next-line
   const [playing, setPlaying] = useState(true)
   const [counter, setCounter] = useState('')
   const [loading, setLoading] = useState(true)
+  const [timer, setTimer] = useState(false)
 
   useEffect(() => {
     startVideo()
@@ -31,6 +33,11 @@ const Workout = () => {
       setTimeout(() => {
         setCounter('GO')
       }, 3000)
+
+      setTimeout(() => {
+        setCounter('')
+        setTimer(true)
+      }, 4000)
     }, 500)
   }, [])
 
@@ -63,6 +70,7 @@ const Workout = () => {
         <video muted autoPlay className='workout-videoFeed'></video>
         {counter !== 'GO' && <div className='workout-counter'>{counter}</div>}
         {counter === 'GO' && <div className='workout-go'>{counter}</div>}
+        <div className='pie-timer'>{timer && <PieTimer />}</div>
       </div>
     </div>
   )

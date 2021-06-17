@@ -38,7 +38,7 @@
 body {
   font-family: 'GilroyBold', sans-serif;
   background: $dark-color;
-  color: #fff;
+  color: $white-color;
   text-align: center;
 }
 
@@ -124,7 +124,7 @@ footer {
   }
 
   .footer-line {
-    border-top: 1px dotted #fff;
+    border-top: 1px dotted $white-color;
     width: 6rem;
     margin: 5px auto 0;
   }
@@ -165,7 +165,7 @@ footer {
     margin: 0;
     font-size: 250px;
     z-index: 2;
-    text-shadow: 2px 2px 14px #050505;
+    text-shadow: 2px 2px 14px $black-color;
   }
 
   &-go {
@@ -178,6 +178,76 @@ footer {
     margin-left: 15px;
     font-size: 220px;
     z-index: 2;
-    text-shadow: 2px 2px 14px #050505;
+    text-shadow: 2px 2px 14px $black-color;
   }
+}
+
+.pie-timer {
+  position: absolute;
+  top: -19px;
+  right: 20px;
+  z-index: 2;
+}
+
+.timer {
+  position: relative;
+  height: 85px;
+  width: 85px;
+  background: $gray-color;
+  border-radius: 50%;
+  margin: auto;
+  border: 10px solid $pitch-black-color;
+}
+
+.rotator {
+  position: absolute;
+  height: 100%;
+  width: 50%;
+  background: $pitch-black-color;
+  border-radius: 42.5px 0 0 42.5px;
+  transform-origin: 100% 50%;
+  transition: transform 1s linear;
+  z-index: 1;
+}
+
+.mask {
+  position: absolute;
+  height: 100%;
+  width: 50%;
+  background: $gray-color;
+  border-radius: 42.5px 0 0 42.5px;
+  z-index: 1;
+}
+
+.mask.second-mask {
+  background: $pitch-black-color;
+  border-radius: 0 42.5px 42.5px 0;
+  right: 0;
+}
+
+.final-mask {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: $pitch-black-color;
+  border-radius: 50% !important;
+}
+
+.light-mask {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: $gray-color;
+  border-radius: 50% !important;
+  z-index: 100;
+}
+
+.timer.final-mask {
+  position: relative;
+  height: 85px;
+  width: 85px;
+  background: $gray-color;
+  border-radius: 50%;
+  margin: auto;
+  border: none;
 }
