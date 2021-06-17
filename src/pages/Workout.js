@@ -70,7 +70,7 @@ const Workout = () => {
         <video muted autoPlay className='workout-videoFeed'></video>
         {counter !== 'GO' && <div className='workout-counter'>{counter}</div>}
         {counter === 'GO' && <div className='workout-go'>{counter}</div>}
-        <div className='pie-timer'>{timer && <PieTimer />}</div>
+        <div className='pie-timer'>{timer && <PieTimer duration={60} />}</div>
       </div>
     </div>
   )

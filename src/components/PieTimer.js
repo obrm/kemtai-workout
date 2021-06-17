@@ -39,7 +39,7 @@ PieTimer.propTypes = {
 }
 
 PieTimer.defaultProps = {
-  duration: 10,
+  duration: 60,
 }
 
 export default PieTimer
