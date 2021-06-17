@@ -28,7 +28,7 @@ const PieTimer = ({ duration }) => {
       <div
         className={`mask ${lightMask ? 'light-mask' : ''} ${
           count / duration > 0.5 ? 'second-mask' : ''
-        } ${count >= duration + 0.5 ? 'final-mask' : ''}`}
+        }`}
       ></div>
     </div>
   )

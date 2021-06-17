@@ -225,14 +225,6 @@ footer {
   right: 0;
 }
 
-.final-mask {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  background: $pitch-black-color;
-  border-radius: 50% !important;
-}
-
 .light-mask {
   position: absolute;
   height: 100%;
@@ -246,7 +238,7 @@ footer {
   position: relative;
   height: 85px;
   width: 85px;
-  background: $gray-color;
+  background: $pitch-black-color;
   border-radius: 50%;
   margin: auto;
   border: none;
