@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react'
 
 const Workout = () => {
-  // eslint-disable-next-line
   const [playing, setPlaying] = useState(false)
   const [counter, setCounter] = useState('')
 
@@ -13,18 +12,22 @@ const Workout = () => {
   }, [])
 
   useEffect(() => {
-    setTimeout(() => {
-      setCounter(1)
-    }, 1000)
+    if (playing) {
+      setTimeout(() => {
+        setTimeout(() => {
+          setCounter(1)
+        }, 1000)
 
-    setTimeout(() => {
-      setCounter(2)
-    }, 2000)
+        setTimeout(() => {
+          setCounter(2)
+        }, 2000)
 
-    setTimeout(() => {
-      setCounter('GO')
-    }, 3000)
-  }, [])
+        setTimeout(() => {
+          setCounter('GO')
+        }, 3000)
+      }, 500)
+    }
+  }, [playing])
 
   const startVideo = () => {
     setPlaying(true)
