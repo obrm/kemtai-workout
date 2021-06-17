@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react'
 const Workout = () => {
   // eslint-disable-next-line
   const [playing, setPlaying] = useState(false)
+  const [counter, setCounter] = useState('')
 
   useEffect(() => {
     startVideo()
@@ -11,8 +12,19 @@ const Workout = () => {
     }, 30000)
   }, [])
 
-  const HEIGHT = 570
-  const WIDTH = 365
+  useEffect(() => {
+    setTimeout(() => {
+      setCounter(1)
+    }, 1000)
+
+    setTimeout(() => {
+      setCounter(2)
+    }, 2000)
+
+    setTimeout(() => {
+      setCounter('GO')
+    }, 3000)
+  }, [])
 
   const startVideo = () => {
     setPlaying(true)
@@ -39,13 +51,9 @@ const Workout = () => {
   return (
     <div className='workout'>
       <div className='workout-container'>
-        <video
-          height={HEIGHT}
-          width={WIDTH}
-          muted
-          autoPlay
-          className='workout-videoFeed'
-        ></video>
+        <video muted autoPlay className='workout-videoFeed'></video>
+        {counter !== 'GO' && <div className='workout-overlay'>{counter}</div>}
+        {counter === 'GO' && <div className='workout-go'>{counter}</div>}
       </div>
     </div>
   )
