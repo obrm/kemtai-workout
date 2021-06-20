@@ -93,8 +93,7 @@ const Workout = () => {
         <div className='bars' style={{ top: height - 80 }}>
           {reps.scoreOfMove.map((height, i) => {
             let time = 5000
-            if (i + 1 < reps.timeOfMove.length)
-              time += reps.timeOfMove[i] * 1000
+            time += reps.timeOfMove[i] * 1000
             return <Bar key={i} id={i + 1} height={height} time={time} />
           })}
         </div>
