@@ -23,7 +23,7 @@ const Workout = () => {
     }, 1000)
 
     const { timeOfMove, scoreOfMove } = reps
-    let time = timeOfMove[0]
+    let time = timeOfMove[0] * 1000
     for (let i = 0; i < timeOfMove.length; i++) {
       time += timeOfMove[i + 1] * 1000
       setTimeout(() => {
