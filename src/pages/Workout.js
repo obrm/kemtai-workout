@@ -23,9 +23,9 @@ const Workout = () => {
     }, 1000)
 
     const { timeOfMove, scoreOfMove } = reps
-    let time = 0
+    let time = timeOfMove[0]
     for (let i = 0; i < timeOfMove.length; i++) {
-      time += timeOfMove[i] * 1000
+      time += timeOfMove[i + 1] * 1000
       setTimeout(() => {
         setScore(scoreOfMove[i + 1])
       }, time)
