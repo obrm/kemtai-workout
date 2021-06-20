@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useHistory } from 'react-router-dom'
 
-import Card from './Card'
+import Card from '../components/Card'
 import Loader from '../layouts/Loader'
 import cards from '../utils/cards'
 
