@@ -22,6 +22,7 @@ const Workout = () => {
       setLoading(false)
     }, 1000)
 
+    // CR: Extract the calculation logic to a "service" file
     const { timeOfMove, scoreOfMove } = reps
     let time = timeOfMove[0] * 1000
     for (let i = 0; i < timeOfMove.length; i++) {
@@ -36,6 +37,7 @@ const Workout = () => {
     }, 66500)
   }, [history])
 
+  // CR: extract the timer logic to a seperate function
   useEffect(() => {
     setTimeout(() => {
       setTimeout(() => {

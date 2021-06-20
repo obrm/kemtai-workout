@@ -1,3 +1,4 @@
+// Rename the "utils" dir to "data" dir so it can suit it purpose better.
 const cards = [
   {
     id: 1,

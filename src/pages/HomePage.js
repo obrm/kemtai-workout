@@ -37,6 +37,8 @@ const HomePage = () => {
                   key={card.id}
                   {...card}
                   isActive={
+                    // CR: this code is not readable, please rewrite it... I don't understand why not just leave it as:
+                    // clicked && ID === card.id
                     clicked && ID === card.id
                       ? true
                       : clicked && ID !== card.id
