@@ -24,7 +24,7 @@ const Bar = ({ id, height, time }) => {
 }
 
 Bar.propTypes = {
-  id: PropTypes.string.isRequired,
+  id: PropTypes.number.isRequired,
   height: PropTypes.number.isRequired,
   time: PropTypes.number.isRequired,
 }
