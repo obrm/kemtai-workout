@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react'
 import { useHistory } from 'react-router-dom'
 import Webcam from 'react-webcam'
 
+import useWindowSize from '../hooks/useWindowSize'
+
 import Loader from '../layouts/Loader'
 import PieTimer from '../components/PieTimer'
 import Bar from '../components/Bar'
@@ -18,6 +20,8 @@ const Workout = () => {
 
   const history = useHistory()
 
+  const { height } = useWindowSize()
+
   useEffect(() => {
     setTimeout(() => {
       setLoading(false)
@@ -28,10 +32,12 @@ const Workout = () => {
     let time = 5000
 
     for (let i = 0; i < timeOfMove.length; i++) {
-      time += timeOfMove[i + 1] * 1000
-      setTimeout(() => {
-        setScore(scoreOfMove[i + 1])
-      }, time)
+      if (i + 1 < timeOfMove.length) {
+        time += timeOfMove[i + 1] * 1000
+        setTimeout(() => {
+          setScore(scoreOfMove[i + 1])
+        }, time)
+      }
     }
 
     setTimeout(() => {
@@ -84,14 +90,12 @@ const Workout = () => {
             </div>
           </>
         )}
-        <div className='bars'>
-          {/* eslint-disable-next-line */}
+        <div className='bars' style={{ top: height - 80 }}>
           {reps.scoreOfMove.map((height, i) => {
             let time = 5000
-            for (let j = 0; j < reps.timeOfMove.length; j++) {
+            if (i + 1 < reps.timeOfMove.length)
               time += reps.timeOfMove[i] * 1000
-              return <Bar key={i} id={i + 1} height={height} time={time} />
-            }
+            return <Bar key={i} id={i + 1} height={height} time={time} />
           })}
         </div>
       </div>
