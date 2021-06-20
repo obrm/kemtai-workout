@@ -4,6 +4,7 @@ import Webcam from 'react-webcam'
 
 import Loader from '../layouts/Loader'
 import PieTimer from '../components/PieTimer'
+import Bar from '../components/Bar'
 
 import reps from '../utils/reps'
 
@@ -23,7 +24,9 @@ const Workout = () => {
     }, 1000)
 
     const { timeOfMove, scoreOfMove } = reps
+
     let time = timeOfMove[0] * 1000
+
     for (let i = 0; i < timeOfMove.length; i++) {
       time += timeOfMove[i + 1] * 1000
       setTimeout(() => {
@@ -81,6 +84,16 @@ const Workout = () => {
             </div>
           </>
         )}
+        <div className='bars'>
+          {/* eslint-disable-next-line */}
+          {reps.scoreOfMove.map((height, i) => {
+            let time = 5000
+            for (let j = 0; j < reps.timeOfMove.length; j++) {
+              time += reps.timeOfMove[i] * 1000
+              return <Bar key={i} id={i + 1} height={height} time={time} />
+            }
+          })}
+        </div>
       </div>
     </div>
   )

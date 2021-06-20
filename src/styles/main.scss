@@ -266,54 +266,99 @@ footer {
   }
 }
 
-.bar {
-  position: relative;
-  width: 12px;
-  height: var(--h, 2px);
-  background-color: var(--c, #444);
-  opacity: 0.85;
-  -moz-border-radius: 6px / 2.5px;
-  -webkit-border-radius: 6px / 2.5px;
-  border-radius: 6px / 2.5px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.75);
-
-  animation-name: var(--animation, move-me-up);
-  animation-duration: 5s;
-
-  &:before {
-    width: 12px;
-    height: 5px;
-    background-color: var(--s, #666);
-    -moz-border-radius: 6px / 2.5px;
-    -webkit-border-radius: 6px / 2.5px;
-    border-radius: 6px / 2.5px;
-    position: absolute;
-    content: '';
-    top: -2.5px;
-  }
-
-  &:after {
-    width: 12px;
-    height: var(--h, 2px);
-    -moz-border-radius: 6px / 2.5px;
-    -webkit-border-radius: 6px / 2.5px;
-    border-radius: 6px / 2.5px;
-    position: absolute;
-    content: '';
-    top: 1px;
-    z-index: -1;
-  }
+.bars {
+  position: fixed;
+  display: flex;
+  top: 90vh;
+  background: $pitch-black-color;
+  height: 100px;
+  width: 100%;
+  z-index: 2;
+  -webkit-box-shadow: 0px -50px 50px 50px $pitch-black-color;
+  box-shadow: 0px -50px 50px 50px $pitch-black-color;
 }
 
-@keyframes move-me-up {
-  0% {
-    height: 0;
-    top: var(--h, 2px);
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.75);
+%bars-shared {
+  position: absolute;
+  top: 45px;
+  background-color: $gray-color;
+  width: 17px;
+  border-radius: 50%;
+  z-index: 2;
+  transition: all 1s ease;
+}
+
+.bar {
+  &-1 {
+    @extend %bars-shared;
+    left: 20px;
   }
 
-  100% {
-    height: var(--h, 2px);
-    top: 0;
+  &-2 {
+    @extend %bars-shared;
+    left: 50px;
+  }
+
+  &-3 {
+    @extend %bars-shared;
+    left: 80px;
+  }
+
+  &-4 {
+    @extend %bars-shared;
+    left: 110px;
+  }
+
+  &-5 {
+    @extend %bars-shared;
+    left: 140px;
+  }
+
+  &-6 {
+    @extend %bars-shared;
+    left: 170px;
+  }
+
+  &-7 {
+    @extend %bars-shared;
+    left: 200px;
+  }
+
+  &-8 {
+    @extend %bars-shared;
+    left: 230px;
+  }
+
+  &-9 {
+    @extend %bars-shared;
+    left: 260px;
+  }
+
+  &-10 {
+    @extend %bars-shared;
+    left: 290px;
+  }
+
+  &-11 {
+    @extend %bars-shared;
+    left: 320px;
+  }
+
+  &-12 {
+    @extend %bars-shared;
+    left: 350px;
+  }
+
+  &.grow {
+    border-radius: 30px;
+  }
+
+  &.green {
+    background: linear-gradient(
+      180deg,
+      rgba(170, 254, 0, 1) 0%,
+      rgba(179, 254, 0, 1) 35%,
+      rgba(255, 255, 0, 1) 100%
+    );
   }
 }
