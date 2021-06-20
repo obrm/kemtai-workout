@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { useHistory } from 'react-router-dom'
+import Webcam from 'react-webcam'
 
 import Loader from '../layouts/Loader'
 import PieTimer from '../components/PieTimer'
@@ -14,16 +15,12 @@ const Workout = () => {
   const history = useHistory()
 
   useEffect(() => {
-    startVideo()
     setTimeout(() => {
       setLoading(false)
     }, 1000)
     setTimeout(() => {
-      stopVideo()
-    }, 67000)
-    setTimeout(() => {
       history.push('/')
-    }, 68000)
+    }, 66500)
   }, [history])
 
   useEffect(() => {
@@ -47,33 +44,18 @@ const Workout = () => {
     }, 500)
   }, [])
 
-  const startVideo = () => {
-    setPlaying(true)
-    navigator.getUserMedia(
-      {
-        video: true,
-      },
-      (stream) => {
-        let video = document.getElementsByClassName('workout-videoFeed')[0]
-        if (video) {
-          video.srcObject = stream
-        }
-      },
-      (err) => console.error(err)
-    )
-  }
-
-  const stopVideo = () => {
-    setPlaying(false)
-    let video = document.getElementsByClassName('workout-videoFeed')[0]
-    video.srcObject.getTracks()[0].stop()
+  const videoConstraints = {
+    facingMode: 'user',
   }
 
   return (
     <div className='workout'>
       {loading && <Loader />}
       <div className='workout-container'>
-        <video muted autoPlay className='workout-videoFeed'></video>
+        <Webcam
+          className='workout-webcam'
+          videoConstraints={videoConstraints}
+        />
         {counter !== 'GO' && <div className='workout-counter'>{counter}</div>}
         {counter === 'GO' && <div className='workout-go'>{counter}</div>}
         <div className='pie-timer'>{timer && <PieTimer duration={60} />}</div>
