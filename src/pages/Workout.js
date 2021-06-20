@@ -31,13 +31,11 @@ const Workout = () => {
 
     let time = 5000
 
-    for (let i = 0; i < timeOfMove.length; i++) {
-      if (i + 1 < timeOfMove.length) {
-        time += timeOfMove[i + 1] * 1000
-        setTimeout(() => {
-          setScore(scoreOfMove[i + 1])
-        }, time)
-      }
+    for (let i = 1; i < timeOfMove.length; i++) {
+      time += timeOfMove[i] * 1000
+      setTimeout(() => {
+        setScore(scoreOfMove[i])
+      }, time)
     }
 
     setTimeout(() => {
@@ -92,8 +90,8 @@ const Workout = () => {
         )}
         <div className='bars' style={{ top: height - 80 }}>
           {reps.scoreOfMove.map((height, i) => {
-            let time = 5000
-            time += reps.timeOfMove[i] * 1000
+            let time = 800
+            time += reps.timeOfMove[i] * 3500
             return <Bar key={i} id={i + 1} height={height} time={time} />
           })}
         </div>
