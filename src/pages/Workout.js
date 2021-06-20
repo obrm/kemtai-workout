@@ -5,11 +5,14 @@ import Webcam from 'react-webcam'
 import Loader from '../layouts/Loader'
 import PieTimer from '../components/PieTimer'
 
+import reps from '../utils/reps'
+
 const Workout = () => {
   // eslint-disable-next-line
   const [playing, setPlaying] = useState(true)
   const [counter, setCounter] = useState('')
   const [loading, setLoading] = useState(true)
+  const [score, setScore] = useState(reps.scoreOfMove[0])
   const [timer, setTimer] = useState(false)
 
   const history = useHistory()
@@ -18,6 +21,16 @@ const Workout = () => {
     setTimeout(() => {
       setLoading(false)
     }, 1000)
+
+    const { timeOfMove, scoreOfMove } = reps
+    let time = 0
+    for (let i = 0; i < timeOfMove.length; i++) {
+      time += timeOfMove[i] * 1000
+      setTimeout(() => {
+        setScore(scoreOfMove[i + 1])
+      }, time)
+    }
+
     setTimeout(() => {
       history.push('/')
     }, 66500)
@@ -58,7 +71,16 @@ const Workout = () => {
         />
         {counter !== 'GO' && <div className='workout-counter'>{counter}</div>}
         {counter === 'GO' && <div className='workout-go'>{counter}</div>}
-        <div className='pie-timer'>{timer && <PieTimer duration={60} />}</div>
+        {timer && (
+          <>
+            <div className='score'>
+              <span>{score}</span>
+            </div>
+            <div className='pie-timer'>
+              <PieTimer duration={60} />
+            </div>
+          </>
+        )}
       </div>
     </div>
   )

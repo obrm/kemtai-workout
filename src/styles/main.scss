@@ -184,8 +184,8 @@ footer {
 
 .pie-timer {
   position: absolute;
-  top: -19px;
-  right: 20px;
+  top: -32px;
+  right: 6px;
   z-index: 2;
 }
 
@@ -242,4 +242,25 @@ footer {
   border-radius: 50%;
   margin: auto;
   border: none;
+}
+
+.score {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: $pitch-black-color;
+  color: $white-color;
+  height: 5.25rem;
+  width: 8.1rem;
+  border-radius: 17px;
+  top: -32px;
+  left: 10px;
+  z-index: 2;
+
+  span {
+    font-family: 'GilroyLight', sans-serif;
+    font-size: 4.75rem;
+  }
 }

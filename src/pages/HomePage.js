@@ -20,7 +20,7 @@ const HomePage = () => {
     }, 800)
     setTimeout(() => {
       history.push('/workout')
-    }, 3000)
+    }, 1000)
   }
 
   return (
