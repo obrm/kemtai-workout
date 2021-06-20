@@ -260,8 +260,60 @@ footer {
   z-index: 2;
 
   span {
-    margin-top: 5px;
+    margin-top: 10px;
     font-family: 'GilroyLight', sans-serif;
     font-size: 4.75rem;
+  }
+}
+
+.bar {
+  position: relative;
+  width: 12px;
+  height: var(--h, 2px);
+  background-color: var(--c, #444);
+  opacity: 0.85;
+  -moz-border-radius: 6px / 2.5px;
+  -webkit-border-radius: 6px / 2.5px;
+  border-radius: 6px / 2.5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.75);
+
+  animation-name: var(--animation, move-me-up);
+  animation-duration: 5s;
+
+  &:before {
+    width: 12px;
+    height: 5px;
+    background-color: var(--s, #666);
+    -moz-border-radius: 6px / 2.5px;
+    -webkit-border-radius: 6px / 2.5px;
+    border-radius: 6px / 2.5px;
+    position: absolute;
+    content: '';
+    top: -2.5px;
+  }
+
+  &:after {
+    width: 12px;
+    height: var(--h, 2px);
+    -moz-border-radius: 6px / 2.5px;
+    -webkit-border-radius: 6px / 2.5px;
+    border-radius: 6px / 2.5px;
+    position: absolute;
+    content: '';
+    top: 1px;
+    z-index: -1;
+  }
+}
+
+@keyframes move-me-up {
+  0% {
+    height: 0;
+    top: var(--h, 2px);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.75);
+  }
+
+  100% {
+    height: var(--h, 2px);
+    top: 0;
   }
 }
