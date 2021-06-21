@@ -8,11 +8,10 @@ import Loader from '../layouts/Loader'
 import PieTimer from '../components/PieTimer'
 import Bar from '../components/Bar'
 
-import reps from '../utils/reps'
+import reps from '../data/reps'
+import { showScore, showCounter } from '../utils/services'
 
 const Workout = () => {
-  // eslint-disable-next-line
-  const [playing, setPlaying] = useState(true)
   const [counter, setCounter] = useState('')
   const [loading, setLoading] = useState(true)
   const [score, setScore] = useState(reps.scoreOfMove[0])
@@ -29,14 +28,7 @@ const Workout = () => {
 
     const { timeOfMove, scoreOfMove } = reps
 
-    let time = 5000
-
-    for (let i = 1; i < timeOfMove.length; i++) {
-      time += timeOfMove[i] * 1000
-      setTimeout(() => {
-        setScore(scoreOfMove[i])
-      }, time)
-    }
+    showScore(timeOfMove, scoreOfMove, setScore)
 
     setTimeout(() => {
       history.push('/')
@@ -44,24 +36,7 @@ const Workout = () => {
   }, [history])
 
   useEffect(() => {
-    setTimeout(() => {
-      setTimeout(() => {
-        setCounter(1)
-      }, 1000)
-
-      setTimeout(() => {
-        setCounter(2)
-      }, 2000)
-
-      setTimeout(() => {
-        setCounter('GO')
-      }, 3000)
-
-      setTimeout(() => {
-        setCounter('')
-        setTimer(true)
-      }, 4000)
-    }, 500)
+    showCounter(setCounter, setTimer)
   }, [])
 
   const videoConstraints = {

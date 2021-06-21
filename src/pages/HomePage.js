@@ -3,7 +3,7 @@ import { useHistory } from 'react-router-dom'
 
 import Card from '../components/Card'
 import Loader from '../layouts/Loader'
-import cards from '../utils/cards'
+import cards from '../data/cards'
 
 const HomePage = () => {
   const [clicked, setClicked] = useState(false)
@@ -23,6 +23,16 @@ const HomePage = () => {
     }, 1000)
   }
 
+  const handleIsActive = (card) => {
+    if (clicked && ID === card.id) {
+      return true
+    } else if (clicked && ID !== card.id) {
+      return false
+    } else {
+      return null
+    }
+  }
+
   return (
     <section className='container'>
       {loading ? (
@@ -32,17 +42,12 @@ const HomePage = () => {
           <h2>{clicked ? `Let's Go` : `Choose a short workout`}</h2>
           <div className='cards-container'>
             {cards.map((card) => {
+              const isActive = handleIsActive(card)
               return (
                 <Card
                   key={card.id}
                   {...card}
-                  isActive={
-                    clicked && ID === card.id
-                      ? true
-                      : clicked && ID !== card.id
-                      ? false
-                      : null
-                  }
+                  isActive={isActive}
                   onClickHandler={onClickHandler}
                 />
               )
