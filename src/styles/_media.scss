@@ -37,35 +37,33 @@
       top: 90px;
       left: 120px;
       margin: 0;
-      font-size: 180px;
+      font-size: 250px;
     }
 
     &-go {
       top: 90px;
       margin-left: 17px;
-      font-size: 180px;
+      font-size: 220px;
     }
   }
 
   .timer {
-    height: 73px;
-    width: 73px;
+    height: 85px;
+    width: 85px;
   }
 
   .timer.final-mask {
-    height: 73px;
-    width: 73px;
+    height: 85px;
+    width: 85px;
   }
-
   .score {
-    height: 4.3rem;
+    height: 5.25rem;
     width: 8.1rem;
     border-radius: 17px;
     top: -32px;
     left: 10px;
 
     span {
-      margin: 10px auto;
       font-size: 4.75rem;
     }
   }
