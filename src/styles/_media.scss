@@ -1,4 +1,75 @@
 @media (max-width: 414px) {
+  .container {
+    max-width: 414px;
+  }
+
+  .card {
+    width: 370px;
+
+    &-img {
+      width: 100%;
+    }
+
+    &-title {
+      font-size: 2.6rem;
+    }
+
+    &-badge {
+      left: 16px;
+      width: 4rem;
+      height: 1.5rem;
+      font-size: 13px;
+    }
+  }
+
+  .active {
+    width: 370px;
+    height: 210px;
+  }
+
+  .not-active {
+    width: 369.5px;
+    height: 209px;
+  }
+
+  .workout {
+    &-counter {
+      top: 90px;
+      left: 120px;
+      margin: 0;
+      font-size: 180px;
+    }
+
+    &-go {
+      top: 90px;
+      margin-left: 17px;
+      font-size: 180px;
+    }
+  }
+
+  .timer {
+    height: 73px;
+    width: 73px;
+  }
+
+  .timer.final-mask {
+    height: 73px;
+    width: 73px;
+  }
+
+  .score {
+    height: 4.3rem;
+    width: 8.1rem;
+    border-radius: 17px;
+    top: -32px;
+    left: 10px;
+
+    span {
+      margin: 10px auto;
+      font-size: 4.75rem;
+    }
+  }
+
   .workout {
     &-counter {
       top: 80px;
@@ -124,6 +195,134 @@
 
     &-12 {
       left: 367px;
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  .container {
+    max-width: 375px;
+  }
+
+  .card {
+    width: 90%;
+
+    &-title {
+      top: 2.8rem;
+      left: 1rem;
+      font-size: 2.4rem;
+    }
+
+    &-badge {
+      width: 3.5rem;
+      font-size: 12px;
+      height: 1.4rem;
+      top: 13px;
+      left: 11px;
+      padding: 4px;
+    }
+  }
+
+  .active {
+    width: 21.63rem;
+    height: 12.21rem;
+  }
+
+  .not-active {
+    width: 21.45rem;
+    height: 12.1rem;
+  }
+
+  .workout {
+    &-counter {
+      top: 180px;
+      left: 130px;
+      margin: 0;
+      font-size: 250px;
+    }
+
+    &-go {
+      top: 180px;
+      margin-left: 20px;
+      font-size: 220px;
+    }
+  }
+
+  .pie-timer {
+    top: -32px;
+    right: 6px;
+  }
+
+  .timer {
+    height: 85px;
+    width: 85px;
+  }
+
+  .timer.final-mask {
+    height: 85px;
+    width: 85px;
+  }
+
+  .score {
+    height: 5.25rem;
+    width: 8.1rem;
+    border-radius: 17px;
+    top: -32px;
+    left: 10px;
+
+    span {
+      margin: 10px auto;
+      font-size: 4.75rem;
+    }
+  }
+
+  .bar {
+    &-1 {
+      left: 20px;
+    }
+
+    &-2 {
+      left: 50px;
+    }
+
+    &-3 {
+      left: 80px;
+    }
+
+    &-4 {
+      left: 110px;
+    }
+
+    &-5 {
+      left: 140px;
+    }
+
+    &-6 {
+      left: 170px;
+    }
+
+    &-7 {
+      left: 200px;
+    }
+
+    &-8 {
+      left: 230px;
+    }
+
+    &-9 {
+      left: 260px;
+    }
+
+    &-10 {
+      left: 290px;
+    }
+
+    &-11 {
+      left: 320px;
+    }
+
+    &-12 {
+      left: 350px;
     }
   }
 }

@@ -56,7 +56,6 @@ h2 {
 
 .container {
   margin: 1.2rem auto 0;
-  max-width: 375px;
   text-align: center;
 }
 
@@ -289,62 +288,50 @@ footer {
 .bar {
   &-1 {
     @extend %bars-shared;
-    left: 20px;
   }
 
   &-2 {
     @extend %bars-shared;
-    left: 50px;
   }
 
   &-3 {
     @extend %bars-shared;
-    left: 80px;
   }
 
   &-4 {
     @extend %bars-shared;
-    left: 110px;
   }
 
   &-5 {
     @extend %bars-shared;
-    left: 140px;
   }
 
   &-6 {
     @extend %bars-shared;
-    left: 170px;
   }
 
   &-7 {
     @extend %bars-shared;
-    left: 200px;
   }
 
   &-8 {
     @extend %bars-shared;
-    left: 230px;
   }
 
   &-9 {
     @extend %bars-shared;
-    left: 260px;
   }
 
   &-10 {
     @extend %bars-shared;
-    left: 290px;
   }
 
   &-11 {
     @extend %bars-shared;
-    left: 320px;
   }
 
   &-12 {
     @extend %bars-shared;
-    left: 350px;
   }
 
   &.grow {
