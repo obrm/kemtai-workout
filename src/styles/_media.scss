@@ -1,3 +1,68 @@
+@media (max-width: 414px) {
+  .workout {
+    &-counter {
+      top: 80px;
+      left: 140px;
+      margin: 0;
+    }
+
+    &-go {
+      top: 80px;
+      margin-left: 30px;
+    }
+  }
+
+  .bar {
+    &-1 {
+      left: 15px;
+    }
+
+    &-2 {
+      left: 48px;
+    }
+
+    &-3 {
+      left: 83px;
+    }
+
+    &-4 {
+      left: 118px;
+    }
+
+    &-5 {
+      left: 153px;
+    }
+
+    &-6 {
+      left: 188px;
+    }
+
+    &-7 {
+      left: 223px;
+    }
+
+    &-8 {
+      left: 258px;
+    }
+
+    &-9 {
+      left: 293px;
+    }
+
+    &-10 {
+      left: 328px;
+    }
+
+    &-11 {
+      left: 363px;
+    }
+
+    &-12 {
+      left: 398px;
+    }
+  }
+}
+
 @media (max-width: 411px) {
   .workout {
     &-counter {
