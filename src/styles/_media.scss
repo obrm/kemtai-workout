@@ -1,0 +1,199 @@
+@media (max-width: 411px) {
+  .workout {
+    &-counter {
+      top: 80px;
+      left: 140px;
+      margin: 0;
+    }
+
+    &-go {
+      top: 80px;
+      margin-left: 30px;
+    }
+  }
+
+  .bar {
+    &-1 {
+      left: 15px;
+    }
+
+    &-2 {
+      left: 47px;
+    }
+
+    &-3 {
+      left: 79px;
+    }
+
+    &-4 {
+      left: 111px;
+    }
+
+    &-5 {
+      left: 143px;
+    }
+
+    &-6 {
+      left: 175px;
+    }
+
+    &-7 {
+      left: 207px;
+    }
+
+    &-8 {
+      left: 239px;
+    }
+
+    &-9 {
+      left: 271px;
+    }
+
+    &-10 {
+      left: 303px;
+    }
+
+    &-11 {
+      left: 335px;
+    }
+
+    &-12 {
+      left: 367px;
+    }
+  }
+}
+
+@media (max-width: 360px) {
+  .bar {
+    &-1 {
+      left: 10px;
+    }
+
+    &-2 {
+      left: 40px;
+    }
+
+    &-3 {
+      left: 70px;
+    }
+
+    &-4 {
+      left: 100px;
+    }
+
+    &-5 {
+      left: 130px;
+    }
+
+    &-6 {
+      left: 160px;
+    }
+
+    &-7 {
+      left: 190px;
+    }
+
+    &-8 {
+      left: 220px;
+    }
+
+    &-9 {
+      left: 250px;
+    }
+
+    &-10 {
+      left: 280px;
+    }
+
+    &-11 {
+      left: 310px;
+    }
+
+    &-12 {
+      left: 340px;
+    }
+  }
+}
+
+@media (max-width: 320px) {
+  .container {
+    max-width: 320px;
+  }
+
+  .card {
+    width: 280px;
+
+    &-img {
+      width: 100%;
+    }
+
+    &-title {
+      top: 2.2rem;
+      font-size: 2rem;
+    }
+
+    &-badge {
+      width: 3.1rem;
+      height: 1.2rem;
+      font-size: 10px;
+      top: 13px;
+      left: 11px;
+      padding: 3px;
+    }
+  }
+
+  .active {
+    width: 280px;
+    height: 10rem;
+  }
+
+  .not-active {
+    width: 280px;
+    height: 9.9rem;
+  }
+
+  .workout {
+    &-counter {
+      top: 90px;
+      left: 120px;
+      margin: 0;
+      font-size: 180px;
+    }
+
+    &-go {
+      top: 90px;
+      margin-left: 17px;
+      font-size: 180px;
+    }
+  }
+
+  .timer {
+    height: 73px;
+    width: 73px;
+  }
+
+  .timer.final-mask {
+    height: 73px;
+    width: 73px;
+  }
+
+  .score {
+    height: 4.3rem;
+    width: 8.1rem;
+    border-radius: 17px;
+    top: -32px;
+    left: 10px;
+
+    span {
+      margin: 10px auto;
+      font-size: 4.75rem;
+    }
+  }
+
+  .bars {
+    height: 70px;
+    transform: translateY(10px);
+    -webkit-box-shadow: 0px -40px 40px 40px $pitch-black-color;
+    box-shadow: 0px -40px 40px 40px $pitch-black-color;
+  }
+}

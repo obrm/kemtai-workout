@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
 
 @import 'config';
-@import 'buttons';
 
 // general styles
 @font-face {
@@ -72,7 +71,7 @@ h2 {
   margin: auto;
   margin-bottom: 1rem;
 
-  h1 {
+  &-title {
     position: absolute;
     top: 2.8rem;
     left: 1rem;
@@ -260,7 +259,7 @@ footer {
   z-index: 2;
 
   span {
-    margin-top: 10px;
+    margin: 10px auto;
     font-family: 'GilroyLight', sans-serif;
     font-size: 4.75rem;
   }
@@ -361,3 +360,5 @@ footer {
     );
   }
 }
+
+@import 'media';
