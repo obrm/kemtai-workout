@@ -142,9 +142,16 @@
       margin: 0;
     }
 
+    &-counter {
+      top: 140px;
+      left: 145px;
+      font-size: 230px;
+    }
+
     &-go {
-      top: 80px;
+      top: 140px;
       margin-left: 30px;
+      font-size: 220px;
     }
   }
 
@@ -225,12 +232,12 @@
 
   .active {
     width: 21.63rem;
-    height: 12.21rem;
+    height: 12.3rem;
   }
 
   .not-active {
-    width: 21.45rem;
-    height: 12.1rem;
+    width: 21.1rem;
+    height: 12rem;
   }
 
   .workout {
@@ -328,6 +335,31 @@
 }
 
 @media (max-width: 360px) {
+  .workout {
+    &-counter {
+      top: 120px;
+      left: 130px;
+      margin: 0;
+      font-size: 200px;
+    }
+
+    &-go {
+      top: 120px;
+      margin-left: 30px;
+      font-size: 190px;
+    }
+  }
+
+  .active {
+    width: 338px;
+    height: 192px;
+  }
+
+  .not-active {
+    width: 325px;
+    height: 183.5px;
+  }
+
   .bar {
     &-1 {
       left: 10px;
