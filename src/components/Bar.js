@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import PropTypes from 'prop-types'
 
-const Bar = ({ id, height, time }) => {
+const Bar = ({ number, height, time }) => {
   const [grow, setGrow] = useState(false)
 
   useEffect(() => {
@@ -12,7 +12,7 @@ const Bar = ({ id, height, time }) => {
 
   return (
     <div
-      className={`bar-${id} bar ${grow && 'grow'} ${
+      className={`bar-${number} bar ${grow && 'grow'} ${
         grow && height > 90 && 'green'
       }`}
       style={{
@@ -24,7 +24,7 @@ const Bar = ({ id, height, time }) => {
 }
 
 Bar.propTypes = {
-  id: PropTypes.number.isRequired,
+  number: PropTypes.number.isRequired,
   height: PropTypes.number.isRequired,
   time: PropTypes.number.isRequired,
 }

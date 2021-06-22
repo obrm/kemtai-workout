@@ -67,7 +67,7 @@ const Workout = () => {
           {reps.scoreOfMove.map((height, i) => {
             let time = 800
             time += reps.timeOfMove[i] * 3500
-            return <Bar key={i} id={i + 1} height={height} time={time} />
+            return <Bar key={i} number={i + 1} height={height} time={time} />
           })}
         </div>
       </div>
