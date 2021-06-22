@@ -2,7 +2,7 @@ export const showScore = (timeOfMove, scoreOfMove, setScore) => {
   let time = 5000
 
   for (let i = 1; i < timeOfMove.length; i++) {
-    time += timeOfMove[i] * 1000
+    time += timeOfMove[i] * 850
     setTimeout(() => {
       setScore(scoreOfMove[i])
     }, time)
